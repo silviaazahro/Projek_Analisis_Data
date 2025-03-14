@@ -8,7 +8,7 @@ import seaborn as sns
 import plotly.express as px
 
 # Load dataset
-dataset = pd.read_csv("https://raw.githubusercontent.com/silviaazahro/Proyek_Analisis_Data/refs/heads/main/dataset_cleaned.csv")
+dataset = pd.read_csv("https://raw.githubusercontent.com/silviaazahro/Projek_Analisis_Data/refs/heads/main/dataset_cleaned.csv")
 
 # Konversi ke datetime
 columns_to_convert = ["order_purchase_timestamp", "order_delivered_customer_date"]
