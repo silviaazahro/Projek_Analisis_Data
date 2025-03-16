@@ -80,6 +80,11 @@ elif menu == "Kategori Produk":
     fig = px.bar(product_counts, x="Kategori", y="Jumlah Pembelian", title="Kategori Produk yang Paling Sering Dibeli")
     st.plotly_chart(fig)
 
+    product_prices = dataset.groupby("product_category_name")["price"].mean().sort_values(ascending=False).head(10).reset_index()
+    fig = px.bar(product_prices, x="price", y="product_category_name", orientation='h',
+                 title="Harga Rata-rata per Kategori Produk")
+    st.plotly_chart(fig)
+
 # 4️⃣  RFM Analysis
 elif menu == "RFM Analysis":
     st.title("📈 RFM Analysis - Segmentasi Pelanggan")
